@@ -7,6 +7,6 @@ public class SearchDTO {
 
     private String id;
 
-    private String index;
+    private String type;
 
 }

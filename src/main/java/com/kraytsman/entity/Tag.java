@@ -12,7 +12,7 @@ public class Tag {
 
     @Id
     @GeneratedValue(generator = "uuid", strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "uuid", strategy = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
     @Column

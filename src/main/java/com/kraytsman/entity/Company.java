@@ -10,12 +10,12 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "companies")
-@Document(indexName = "company")
+@Document(indexName = "elastic", type = "companies")
 public class Company {
 
     @Id
     @GeneratedValue(generator = "uuid", strategy = GenerationType.IDENTITY)
-    @GenericGenerator(name = "uuid", strategy = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
     @Column

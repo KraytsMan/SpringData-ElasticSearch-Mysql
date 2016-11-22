@@ -8,8 +8,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "user")
-@Document(indexName = "user")
+@Table(name = "users")
+@Document(indexName = "elastic", type = "users")
 public class User {
 
     @Id
