@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: full-text-search.
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/girls_in_tech?useUnicode=true&characterEncoding=UTF-8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: kraytsman
+    password: 1111
+    dbcp:
+      max-active: 20
+      test-while-idle: true
+      time-between-eviction-runs-millis: 3600000
+      validation-query: Select 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql: true
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-nodes: localhost:9300
